@@ -1,6 +1,7 @@
 const canvas = document.querySelector("#jsCanvas");
 const ctx = canvas.getContext("2d");
 const color = document.querySelectorAll(".jsColor");
+const range = document.querySelector(".controls__range input");
 
 let painting = false;
 
@@ -46,3 +47,10 @@ function handleColorClick(event) {
 }
 
 colors.forEach((color) => color.addEventListener("click", handleColorClick));
+
+function handleChangeRange(event) {
+  const stroke = event.target.value;
+  ctx.lineWidth = stroke;
+}
+
+range.addEventListener("input", handleChangeRange);
