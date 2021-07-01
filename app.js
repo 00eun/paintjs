@@ -2,8 +2,10 @@ const canvas = document.querySelector("#jsCanvas");
 const ctx = canvas.getContext("2d");
 const color = document.querySelectorAll(".jsColor");
 const range = document.querySelector(".controls__range input");
+const mode = document.querySelector("#jsMode");
 
 let painting = false;
+let filling = false;
 
 canvas.width = document.querySelector("canvas").offsetWidth;
 canvas.height = document.querySelector("canvas").offsetHeight;
@@ -40,6 +42,7 @@ if (canvas) {
 
 const colors = Array.from(color);
 //console.log(colors);
+
 function handleColorClick(event) {
   const changeClick = event.target.style.backgroundColor;
   console.log(changeClick);
@@ -53,4 +56,20 @@ function handleChangeRange(event) {
   ctx.lineWidth = stroke;
 }
 
-range.addEventListener("input", handleChangeRange);
+function handleModeClick() {
+  if (filling === true) {
+    filling = false;
+    mode.innerText = "Fill";
+  } else {
+    filling = true;
+    mode.innerText = "Paint";
+  }
+}
+
+if (range) {
+  range.addEventListener("input", handleChangeRange);
+}
+
+if (mode) {
+  mode.addEventListener("click", handleModeClick);
+}
