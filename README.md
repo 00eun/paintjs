@@ -1,10 +1,13 @@
-# MOMENTUM CLONE CODING
+# Painting Board
 
-## 모멘텀
+## 간단한 그림판 만들기
 
 **HTML, CSS, Vanila JS**
 
 **21.06.30 ~ 21.07.03**
+
+https://00eun.github.io/paintjs/
+
 
 ---
 
