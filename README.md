@@ -2,7 +2,7 @@
 
 ## 간단한 그림판 만들기
 
-**HTML, CSS, Vanila JS**
+**HTML, CSS, Vanila JS, JSON**
 
 **21.06.30 ~ 21.07.03**
 
